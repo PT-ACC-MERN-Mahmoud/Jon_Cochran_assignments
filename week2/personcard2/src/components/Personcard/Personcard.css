@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 225px;
+    width: 400px;
+    background-color: #a7f6ff;
+    border:rgb(130, 130, 130);
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin: 10px 10px 10px 20px
+}
+
+.bold-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+}
+
+.p-text {
+    font-style: normal;
+    font-weight: 600;
+    color:rgb(125, 121, 121);
+}
+
+.btn {
+    font-size: 15px;
+    width: 80%;
+    height: 25px;
+    border-radius: 10px;
+}
