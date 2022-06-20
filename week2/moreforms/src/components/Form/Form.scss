@@ -1,0 +1,36 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 400px;
+    width: 400px;
+    margin: 10px 20px 20px 10px;
+    background-color: #99a7b0;
+
+    .form-item {
+        font-size: 15px;
+        font-weight: 700;
+        margin: 10px 5px;
+        width: 95%;
+        
+    }
+
+    input {
+        width: 60%;
+    }
+
+    .btn {
+        font-size: 20px;
+        border: none;
+        border-radius: 10px;
+        background-color: #238ccd;
+        text-align: center;
+        margin-left: 50px;
+    } 
+    .p-alert {
+        font-size: 15px;
+        font-weight: 700;
+        color: red;
+    }
+}
