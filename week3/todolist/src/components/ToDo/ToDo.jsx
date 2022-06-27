@@ -5,11 +5,17 @@ const ToDo = () => {
     const [todos, setTodos] = useState([]);
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         if(newTodo == ''){
             return;
-        }
-        e.preventDefault();
-        setTodos([...todos, newTodo]);
+        };
+
+        const todoItem = {
+            text: newTodo,
+            status: false,
+        };
+
+        setTodos([...todos, todoItem]);
         setNewTodo("");
 
     }
@@ -20,12 +26,23 @@ const ToDo = () => {
     }
 
     const handleTodoDelete = (delIdx) => {
-        const filteredTodos = todos.filter((todo, i) => {
+        const filteredTodos = todos.filter((item, i) => {
             return i !== delIdx 
         })
-        setTodos(filteredTodos);
-        
+        setTodos(filteredTodos); 
+        console.log(filteredTodos); 
     }
+
+    const toggleCheckedItem = (idx) => {
+        const updatedTodos = todos.map((item,i) => {
+            if(idx == i){
+                item.status = !item.status;
+            }
+            return item
+        });
+        setTodos(updatedTodos)
+    }
+
   return (
     <div>
         <form onSubmit={handleSubmit}>
@@ -35,10 +52,13 @@ const ToDo = () => {
         </form>
         <div>
             {todos.map((item, i) => (
+               
                 <div key={i}>
                     <form>
-                        <label htmlFor="">{item}</label>
-                        <input type="checkbox" name="" id="" />
+                        <input type="checkbox" checked={item.status} onChange={() => {
+                            toggleCheckedItem(i);
+                        }} />
+                        <label htmlFor="text" className=''>{item.text}</label>
                         <button onClick={() => handleTodoDelete(i)}>Delete</button>
                     </form>
                 </div>
