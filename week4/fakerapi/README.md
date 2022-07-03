@@ -4,14 +4,14 @@ In this assignment, we will be using 2 Javascript libraries to create a simple A
 
 For this assignment, you are tasked with creating User and Company objects
 ### Objects
-- User Object
+User Object
  - password
  - email
  - phoneNumber
  - lastName
  - firstName
  - _id
-- Company Object
+Company Object
  - _id
  - name
  - address
