@@ -11,6 +11,7 @@ User Object
  - lastName
  - firstName
  - _id
+
 Company Object
  - _id
  - name
