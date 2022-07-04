@@ -1,0 +1,12 @@
+[
+    { "id": 1,
+        "tablinks": "Tab One",
+        "title": "Content One",
+        "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, nihil, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repellendus corrupti corporis dolor culpa commodi!"
+    },
+    { "id": 2,
+      "tablinks": "Tab Two",
+      "title": "Content Two",
+      "content": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, nihil, Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repellendus corrupti corporis dolor culpa TWO!"
+    }
+]

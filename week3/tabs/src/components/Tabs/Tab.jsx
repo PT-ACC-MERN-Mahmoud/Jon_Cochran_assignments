@@ -19,7 +19,7 @@ const Tab = (props) => {
         <div className="content-tabs">
         <div id="tab" className={toggleState === 1 ? 'content active-content' : 'content'}>
             <h3>Content One</h3>
-            <hr/>
+            <br/>
             <p> 
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, nihil.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repellendus corrupti corporis dolor culpa commodi!
@@ -28,7 +28,7 @@ const Tab = (props) => {
 
         <div id="tab" className={toggleState === 2 ? 'content active-content' : 'content'}>
             <h3>Content Two</h3>
-            <hr/>
+            <br/>
             <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam, content 2.
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque repellendus corrupti corporis dolor culpa commodi!
             </p>
