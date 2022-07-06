@@ -2,7 +2,7 @@ import {
 BrowserRouter,
 Routes,
 Route,
-NavLink } from 'react-router-dom';
+} from 'react-router-dom';
 import Home from '../src/components/Home';
 import Number from '../src/components/Number';
 import Word from '../src/components/Word';
