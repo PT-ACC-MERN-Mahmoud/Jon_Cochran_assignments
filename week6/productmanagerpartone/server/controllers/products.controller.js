@@ -3,7 +3,7 @@ const Product = require('../models/products.model');
 module.exports.findAllProducts = (req, res) => {
     Product.find()
     .then((allDaProducts) => {
-        res.json({products: allDAProducts})
+        res.json({products: allDaProducts})
     })
     .catch((err) => {
         res.json({message: 'Something went wrong', error: err})
@@ -13,7 +13,7 @@ module.exports.findAllProducts = (req, res) => {
 module.exports.findOneProduct = (req, res) => {
     Product.findOne({_id: req.params.id})
     .then(oneSingleProduct => {
-        req.json({product: oneSingleProduct})
+        res.json({product: oneSingleProduct})
     })
     .catch((err) => {
         res.json({message: 'Something went wrong', error: err})
