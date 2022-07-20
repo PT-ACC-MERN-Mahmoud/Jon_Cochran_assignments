@@ -1,17 +1,20 @@
 import React from 'react';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Main from '../src/views/Main';
-import Detail from '../src/views/Detail';
+import OneProduct from './components/OneProduct';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route element={<Main />} path="/" default />
-          <Route element={<Detail />} path="/api/products/:id" />
-        </Routes>
+      {
+      <Routes>
+        <Route element={<Main />} path="/" />
+        <Route element={<OneProduct />} path="/products/:id" />
+      </Routes>
+
+      }
       </BrowserRouter>
     </div>
   );

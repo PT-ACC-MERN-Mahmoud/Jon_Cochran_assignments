@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
-import axios from 'axios';
-import ProductForm from '../components/ProductForm/ProductForm';
-import ProductList from '../components/ProductList/ProductList';
+import CreateProduct from '../components/CreateProduct';
+import AllProducts from '../components/AllProducts';
+
 const Main = (props) => {
     
-    const [products, setProducts] = useState([]);
+    const [productList, setProductList] = useState([]);
     
     return (
         <div>
-           <ProductForm products={products} setProducts={setProducts} />
-           <hr/>
-            <ProductList products={products} setProducts={setProducts} />
+           <CreateProduct productList={productList} setProductList={setProductList} />
+           <AllProducts productList={productList} setProductList={setProductList} />
         </div>
     )
 }
