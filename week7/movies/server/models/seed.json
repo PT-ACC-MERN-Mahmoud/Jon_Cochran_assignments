@@ -1,0 +1,29 @@
+[
+    {
+      "title": "The Matrix",
+      "boxArt": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi6qIBfKhVuhMvBCEKHWNM82cvHuXoOtMKQw&usqp=CAU",
+      "watchLength": "2hrs & 16mins",
+      "rating": "R",
+      "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+      "isKidFriendly": false,
+      "releaseYear": 1999
+    },
+    {
+      "title": "The Matrix Reloaded",
+      "boxArt": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAAK96otcAO7aLoILd1ScwROOf3OP5OCBxKA&usqp=CAU",
+      "watchLength": "2hrs & 18mins",
+      "rating": "R",
+      "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+      "isKidFriendly": false,
+      "releaseYear": 2003
+    },
+    {
+      "title": "Harry Potter and the Sorcerer's Stone",
+      "boxArt": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUSjRxR3mj4bZVGR120pCLf6cBxcPQgcrbkw&usqp=CAU",
+      "watchLength": "2hrs & 32mins",
+      "rating": "R",
+      "actors": ["Daniel Radcliffe", "Emma Watson", "Rupert Grint"],
+      "isKidFriendly": false,
+      "releaseYear": 2001
+    }
+  ]
