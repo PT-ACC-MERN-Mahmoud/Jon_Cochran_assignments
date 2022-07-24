@@ -5,5 +5,5 @@ module.exports = (app) => {
     app.get('/api/movies/:id', movieController.findOneMovie);
     app.post('/api/movies', movieController.createMovie);
     app.put('/api/movies/:id', movieController.updateAMovie);
-    app.delete('/api/movies:/:id', movieController.deleteOneMovie)
+    app.delete('/api/movies/:id', movieController.deleteOneMovie)
 }

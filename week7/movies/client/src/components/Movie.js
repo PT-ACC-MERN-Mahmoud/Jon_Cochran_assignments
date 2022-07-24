@@ -16,13 +16,14 @@ const Movie = () => {
     .catch((err) => console.log('Get Movie By ID error', err));
 
     }, [id]);
+
     const deleteMovie = (movieId) => {
       axios.delete(`http://localhost:8000/api/movies/${id}`)
-    .then((res) => {
-      navigate('/')
-    })
-    .catch((err) => console.log('Get Movie By ID error', err));
-    }
+      .then((res) => {
+        navigate('/')
+      })
+      .catch((err) => console.log('Get Movie By ID error', err));
+    };
 
   return (
     <div>

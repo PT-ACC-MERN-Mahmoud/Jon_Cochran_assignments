@@ -15,6 +15,16 @@ const MovieList = () => {
     .catch((err) => console.log(err));
   }, [])
 
+  const deleteMovie = (movieId) => {
+    axios
+      .delete(`http://localhost:8000/api/movies/${movieId}`)
+      .then((res) => {
+        const newMovies = movies.filter((movie) => movie._id !== movieId);
+        setMovies(newMovies);
+      })
+      .catch((err) => console.log(err));
+  };
+
   return (
     <div className='container'>
       {movies.map((movie) => (
@@ -23,6 +33,12 @@ const MovieList = () => {
           <img src={movie.boxArt} alt={movie.title}/>
           <br />
           <Link to={`/movie/${movie._id}`}>Details</Link>
+          <span> | </span>
+          <Link to={`/movie/edit/${movie._id}`}>Edit</Link>
+          <br />
+          <button style={{ marginTop: '1rem' }} onClick={() => deleteMovie(movie._id)}>
+            Delete
+          </button>
         </div>
       ))}
 

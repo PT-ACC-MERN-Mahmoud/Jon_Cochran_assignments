@@ -11,6 +11,7 @@ const NewMovie = () => {
   const [isKidFriendly, setIsKidFriendly] = useState(false);
   const [releaseYear, setReleaseYear] = useState(0);
   const navigate = useNavigate();
+  const [errors, setErrors] = useState({});
   //handle submit 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,12 +28,13 @@ const NewMovie = () => {
         console.log(res.data);
         navigate('/');
     })
-    .catch((err) => console.log('Post error issue', err));
+    .catch((err) => setErrors(err.response.data.errors.message));
   }
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         <label>Title</label>
       <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} />
+      {errors.title && <span className="text-danger">{errors.title.message}</span>}
       <label>Box Art</label>
       <input type="text" value={boxArt} onChange={(e) => setBoxArt(e.target.value)} />
       <label>Duration</label>
