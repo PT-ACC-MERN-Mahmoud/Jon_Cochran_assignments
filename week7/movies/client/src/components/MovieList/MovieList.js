@@ -5,6 +5,7 @@ import './MovieList.css';
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     axios.get('http://localhost:8000/api/movies')
@@ -25,6 +26,11 @@ const MovieList = () => {
       .catch((err) => console.log(err));
   };
 
+  const counter = () => {
+    setCount((count) => count + 1)
+    console.log('button clicked', count)
+  }
+
   return (
     <div className='container'>
       {movies.map((movie) => (
@@ -38,6 +44,9 @@ const MovieList = () => {
           <br />
           <button style={{ marginTop: '1rem' }} onClick={() => deleteMovie(movie._id)}>
             Delete
+          </button>
+          <button style={{ marginTop: '1rem' }} onClick={(e) => counter(e)}>
+            Like {count}
           </button>
         </div>
       ))}
