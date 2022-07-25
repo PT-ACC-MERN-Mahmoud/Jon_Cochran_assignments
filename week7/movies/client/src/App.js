@@ -5,6 +5,7 @@ import Movie from '../src/components/Movie';
 import MovieList from './components/MovieList/MovieList';
 import NewMovie from '../src/components/NewMovie';
 import EditMovie from './components/EditMovie';
+import Socket from './components/Socket';
 
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
     
     <BrowserRouter>
     <Header />
+    <Socket />
     {
       <Routes>
         <Route path="/" element={<MovieList />} />
