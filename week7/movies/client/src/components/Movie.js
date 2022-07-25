@@ -25,6 +25,11 @@ const Movie = () => {
       .catch((err) => console.log('Get Movie By ID error', err));
     };
 
+    const counter = () => {
+      setCount((count) => count + 1)
+      console.log('button clicked', count)
+    }
+
   return (
     <div>
         <h2>{movie.title}</h2>
@@ -35,6 +40,9 @@ const Movie = () => {
         <p>{movie.isKidFriendly ? "okay for kiddos" : "No"}</p>
         <p>released: {movie.releaseYear}</p>
         <button onClick={deleteMovie}>Delete</button>
+        <button onClick={(e) => counter(e)}>
+            Like {count}
+        </button>
     </div>
   )
 }

@@ -26,10 +26,6 @@ const MovieList = () => {
       .catch((err) => console.log(err));
   };
 
-  const counter = () => {
-    setCount((count) => count + 1)
-    console.log('button clicked', count)
-  }
 
   return (
     <div className='container'>
@@ -44,9 +40,6 @@ const MovieList = () => {
           <br />
           <button style={{ marginTop: '1rem' }} onClick={() => deleteMovie(movie._id)}>
             Delete
-          </button>
-          <button style={{ marginTop: '1rem' }} onClick={(e) => counter(e)}>
-            Like {count}
           </button>
         </div>
       ))}
